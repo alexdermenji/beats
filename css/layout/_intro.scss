@@ -1,7 +1,7 @@
 .intro {
   display: flex;
   &__content {
-    width: 49%;
+    width: 55%;
   }
 
   &__title {
@@ -30,10 +30,20 @@
   }
 
   @each $icon in (eyes, battery, charge) {
-    &__features-item:before {
+    &__features--#{$icon}:before {
       background: url("../../img/icon-#{$icon}.png") no-repeat center;
       @include icon(41px, 41px);
       left: -10px;
     }
+  }
+
+  &__img-block {
+    width: 50%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    left: -20px;
   }
 }

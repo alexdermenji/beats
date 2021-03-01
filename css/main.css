@@ -94,7 +94,7 @@ body {
   display: flex;
 }
 .intro__content {
-  width: 49%;
+  width: 55%;
 }
 .intro__title {
   padding-top: 46px;
@@ -117,7 +117,7 @@ body {
   position: relative;
   padding-left: 40px;
 }
-.intro__features-item:before {
+.intro__features--eyes:before {
   background: url("../../img/icon-eyes.png") no-repeat center;
   display: block;
   content: "";
@@ -126,7 +126,7 @@ body {
   position: absolute;
   left: -10px;
 }
-.intro__features-item:before {
+.intro__features--battery:before {
   background: url("../../img/icon-battery.png") no-repeat center;
   display: block;
   content: "";
@@ -135,7 +135,7 @@ body {
   position: absolute;
   left: -10px;
 }
-.intro__features-item:before {
+.intro__features--charge:before {
   background: url("../../img/icon-charge.png") no-repeat center;
   display: block;
   content: "";
@@ -144,12 +144,24 @@ body {
   position: absolute;
   left: -10px;
 }
+.intro__img-block {
+  width: 50%;
+  position: relative;
+}
+.intro__img {
+  position: absolute;
+  left: -20px;
+}
 
 .menu__list {
   display: flex;
 }
 .menu__item:not(:last-child) {
   margin-right: 27px;
+}
+.menu__link {
+  text-decoration: none;
+  color: #292929;
 }
 
 .btn {
@@ -161,4 +173,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 100px;
+}
+.btn:hover {
+  background-color: #ca1b36;
 }

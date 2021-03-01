@@ -7,4 +7,8 @@
   text-transform: uppercase;
   color: $color-white;
   border-radius: 100px;
+
+  &:hover {
+    background-color: #ca1b36;
+  }
 }

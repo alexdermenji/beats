@@ -6,4 +6,9 @@
   &__item:not(:last-child) {
     margin-right: 27px;
   }
+
+  &__link {
+    text-decoration: none;
+    color: $color-primary;
+  }
 }
