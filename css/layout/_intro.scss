@@ -1,0 +1,39 @@
+.intro {
+  display: flex;
+  &__content {
+    width: 49%;
+  }
+
+  &__title {
+    padding-top: 46px;
+    margin-bottom: 22px;
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    margin-bottom: 36px;
+  }
+
+  &__btn {
+    margin-bottom: 70px;
+  }
+
+  &__features-list {
+    display: flex;
+  }
+  &__features-item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__features-item {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  @each $icon in (eyes, battery, charge) {
+    &__features-item:before {
+      background: url("../../img/icon-#{$icon}.png") no-repeat center;
+      @include icon(41px, 41px);
+      left: -10px;
+    }
+  }
+}

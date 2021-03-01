@@ -1,0 +1,7 @@
+@mixin icon($width, $height) {
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+  position: absolute;
+}

@@ -1,0 +1,164 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-width: 1100px;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 920px;
+}
+
+body {
+  font-family: "Play", sans-serif;
+}
+
+.title--main {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+}
+
+.hero {
+  background-color: #f5f5f5;
+  padding-bottom: 52px;
+  padding-top: 24px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 46px;
+}
+.header__contacts {
+  position: relative;
+}
+.header__phone::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background: url(../../img/icon-phone.png) no-repeat center;
+  left: -20px;
+}
+
+.intro {
+  display: flex;
+}
+.intro__content {
+  width: 49%;
+}
+.intro__title {
+  padding-top: 46px;
+  margin-bottom: 22px;
+}
+.intro__subtitle {
+  font-size: 21px;
+  margin-bottom: 36px;
+}
+.intro__btn {
+  margin-bottom: 70px;
+}
+.intro__features-list {
+  display: flex;
+}
+.intro__features-item:not(:last-child) {
+  margin-right: 8px;
+}
+.intro__features-item {
+  position: relative;
+  padding-left: 40px;
+}
+.intro__features-item:before {
+  background: url("../../img/icon-eyes.png") no-repeat center;
+  display: block;
+  content: "";
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  left: -10px;
+}
+.intro__features-item:before {
+  background: url("../../img/icon-battery.png") no-repeat center;
+  display: block;
+  content: "";
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  left: -10px;
+}
+.intro__features-item:before {
+  background: url("../../img/icon-charge.png") no-repeat center;
+  display: block;
+  content: "";
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  left: -10px;
+}
+
+.menu__list {
+  display: flex;
+}
+.menu__item:not(:last-child) {
+  margin-right: 27px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e01f3d;
+  padding: 18px 41px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 100px;
+}

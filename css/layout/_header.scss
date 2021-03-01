@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 46px;
+
+  &__contacts {
+    position: relative;
+  }
+  &__phone::before {
+    @include icon(14px, 14px);
+    background: url(../../img/icon-phone.png) no-repeat center;
+    left: -20px;
+  }
+}
