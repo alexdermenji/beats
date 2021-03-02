@@ -1,7 +1,7 @@
 .intro {
   display: flex;
   &__content {
-    width: 55%;
+    width: 50%;
   }
 
   &__title {
@@ -31,19 +31,29 @@
 
   @each $icon in (eyes, battery, charge) {
     &__features--#{$icon}:before {
-      background: url("../../img/icon-#{$icon}.png") no-repeat center;
+      background: url("../img/icon-#{$icon}.png") no-repeat center;
       @include icon(41px, 41px);
       left: -10px;
     }
   }
 
-  &__img-block {
-    width: 50%;
-    position: relative;
-  }
-
   &__img {
     position: absolute;
-    left: -20px;
+    right: 30px;
+    width: 43%;
+    z-index: 1;
+
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
   }
+
+  // &__img-block {
+  //   width: 40%;
+  //   position: relative;
+  // }
+
+  // &__img {
+  //   position: absolute;
+  //   left: -20px;
+  // }
 }
