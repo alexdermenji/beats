@@ -3,4 +3,12 @@
   padding-bottom: 52px;
   padding-top: 24px;
   min-height: 100vh;
+  position: relative;
+  &:after {
+    @include icon(46px, 10px);
+    background-color: $color-grey-dark;
+    bottom: -4px;
+    right: 124px;
+    transform: rotate(-45deg);
+  }
 }

@@ -1,0 +1,44 @@
+.review {
+  background-color: $color-grey-lighter;
+  padding: 42px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    @include icon(83px, 83px);
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -70%);
+
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &--active {
+    display: flex;
+  }
+  &__img {
+    width: 253px;
+    height: 264px;
+    margin-right: 40px;
+  }
+  &__content {
+    flex: 1;
+    padding-top: 35px;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    color: $color-ternary;
+    margin-bottom: 38px;
+  }
+
+  &__author {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

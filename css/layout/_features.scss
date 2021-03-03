@@ -1,0 +1,68 @@
+.features {
+  padding-top: 103px;
+  padding-bottom: 78px;
+  height: 100vh;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__item-title {
+    margin-bottom: 7px;
+  }
+
+  &__item-text {
+    color: $color-ternary;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 62px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+  &__subtitle {
+    width: 60%;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-ternary;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-grey-light;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin-bottom: 24px;
+    &:before {
+      @include icon(68px, 68px);
+    }
+  }
+
+  @each $number in (1, 2, 3) {
+    &__img--#{$number}:before {
+      background: url("../img/icons/icon-feature-#{$number}.png")
+        no-repeat
+        center;
+    }
+  }
+}

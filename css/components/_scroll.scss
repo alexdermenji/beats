@@ -2,6 +2,7 @@
   position: fixed;
   top: 240px;
   right: 49px;
+  z-index: 10;
 
   &__list {
     display: flex;

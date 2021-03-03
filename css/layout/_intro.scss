@@ -24,16 +24,21 @@
 
   &__features-list {
     display: flex;
+    flex-direction: row;
   }
 
   &__features-item {
     position: relative;
     padding-left: 40px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 
   @each $icon in (eyes, battery, charge) {
     &__features--#{$icon}:before {
-      background: url("../img/icon-#{$icon}.png") no-repeat center;
+      background: url("../img/icons/icon-#{$icon}.png") no-repeat center;
       @include icon(41px, 41px);
       left: -10px;
     }
@@ -48,14 +53,4 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
   }
-
-  // &__img-block {
-  //   width: 40%;
-  //   position: relative;
-  // }
-
-  // &__img {
-  //   position: absolute;
-  //   left: -20px;
-  // }
 }
