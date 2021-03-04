@@ -1,0 +1,12 @@
+.form {
+  height: 100vh;
+  padding-top: 68px;
+  padding-bottom: 85px;
+  color: $color-white;
+  background: url("../img/bg/bg-form.png") no-repeat center;
+  background-size: cover;
+  &__title {
+    text-align: center;
+    margin-bottom: 58px;
+  }
+}

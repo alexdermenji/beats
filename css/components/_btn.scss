@@ -11,4 +11,14 @@
   &:hover {
     background-color: #ca1b36;
   }
+  &:focus {
+    outline: 3px solid $color-secondary;
+  }
+
+  &--reset {
+    color: $color-white;
+    &:focus {
+      outline: 3px solid $color-secondary;
+    }
+  }
 }
