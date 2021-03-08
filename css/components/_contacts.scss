@@ -1,0 +1,13 @@
+.contacts {
+  position: relative;
+  &__phone {
+    text-decoration: none;
+    color: $color-primary;
+    padding: 20px;
+  }
+  &__phone::before {
+    @include icon(14px, 14px);
+    background: url(../img/icons/icon-phone.png) no-repeat center;
+    left: 0;
+  }
+}

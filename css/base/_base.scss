@@ -52,4 +52,26 @@ table {
 .container {
   margin: 0 auto;
   width: 920px;
+  &--section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &--hero {
+    @extend .container--section;
+    justify-content: space-between;
+    background: url(../img/headphones.png) right center / 50% auto no-repeat;
+  }
+  &--features {
+    @extend .container--section;
+    justify-content: center;
+  }
+  &--reviews {
+    @extend .container--features;
+  }
+  &--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

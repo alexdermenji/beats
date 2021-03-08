@@ -1,7 +1,5 @@
 .intro {
   display: flex;
-  background: url(../img/headphones.png) no-repeat right;
-  background-size: contain;
   &__content {
     width: 60%;
   }
@@ -16,32 +14,6 @@
     width: 70%;
     font-size: 21px;
     margin-bottom: 36px;
-  }
-
-  &__btn {
-    margin-bottom: 70px;
-  }
-
-  &__features-list {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__features-item {
-    position: relative;
-    padding-left: 40px;
-
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
-
-  @each $icon in (eyes, battery, charge) {
-    &__features--#{$icon}:before {
-      background: url("../img/icons/icon-#{$icon}.png") no-repeat center;
-      @include icon(41px, 41px);
-      left: -10px;
-    }
   }
 
   &__img {

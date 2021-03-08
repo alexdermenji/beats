@@ -1,0 +1,23 @@
+.advantages {
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    max-width: 150px;
+    position: relative;
+    padding-left: 40px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  @each $icon in (eyes, battery, charge) {
+    &--#{$icon}:before {
+      background: url("../img/icons/icon-#{$icon}.png") no-repeat center;
+      @include icon(41px, 41px);
+      left: -10px;
+    }
+  }
+}
