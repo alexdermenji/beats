@@ -118,6 +118,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.header__menu {
+  width: 70%;
+}
 
 .intro {
   display: flex;
@@ -299,9 +302,7 @@ body {
 
 .menu__list {
   display: flex;
-}
-.menu__item:not(:last-child) {
-  margin-right: 27px;
+  justify-content: space-between;
 }
 .menu__link {
   text-decoration: none;
