@@ -1,19 +1,19 @@
 .features {
-  padding-top: 103px;
+  padding-top: rem(103px);
   position: relative;
-  padding-bottom: 78px;
+  padding-bottom: rem(78px);
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   &:after {
     @include icon(0px, 0px);
     bottom: 0;
-    left: 60px;
-    border: 30px solid transparent;
+    left: rem(60px);
+    border: rem(30px) solid transparent;
     border-left-color: $color-secondary;
     border-right-width: 0;
     transform: rotate(20deg);
-    border-bottom-width: 30px;
-    border-top-width: 30px;
+    border-bottom-width: rem(30px);
+    border-top-width: rem(30px);
   }
   &__list {
     display: flex;
@@ -31,13 +31,13 @@
     }
 
     &:last-child {
-      padding-right: 0;
+      padding-right: rem(0px);
     }
 
     &:not(:last-child)::after {
       content: url(../img/icons/icon-separator.png);
       position: absolute;
-      top: 30px;
+      top: rem(30px);
       right: 0%;
       transform: translateX(50%);
     }
@@ -48,7 +48,7 @@
   }
 
   &__item-title {
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
   }
 
   &__item-text {
@@ -59,16 +59,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 62px;
+    margin-bottom: rem(62px);
   }
 
   &__title {
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
   }
   &__subtitle {
     width: 60%;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: rem(16px);
+    line-height: rem(19px);
     color: $color-ternary;
   }
 
@@ -78,11 +78,11 @@
     justify-content: center;
     background-color: $color-grey-light;
     border-radius: 50%;
-    width: 128px;
-    height: 128px;
-    margin-bottom: 24px;
+    width: rem(128px);
+    height: rem(128px);
+    margin-bottom: rem(24px);
     &:before {
-      @include icon(68px, 68px);
+      @include icon(rem(68px), rem(68px));
     }
   }
 

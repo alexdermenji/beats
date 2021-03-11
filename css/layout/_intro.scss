@@ -6,19 +6,19 @@
 
   &__title {
     width: 70%;
-    padding-top: 46px;
-    margin-bottom: 22px;
+    padding-top: rem(46px);
+    margin-bottom: rem(22px);
   }
 
   &__subtitle {
     width: 70%;
-    font-size: 21px;
-    margin-bottom: 36px;
+    font-size: rem(21px);
+    margin-bottom: rem(36px);
   }
 
   &__img {
     position: absolute;
-    right: 30px;
+    right: rem(30px);
     width: 43%;
     z-index: 1;
 

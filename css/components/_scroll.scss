@@ -1,7 +1,7 @@
 .scroll {
   position: fixed;
-  top: 240px;
-  right: 49px;
+  top: rem(240px);
+  right: rem(49px);
   z-index: 10;
 
   &__list {
@@ -12,11 +12,11 @@
   &__item {
     display: block;
     border-radius: 50%;
-    width: 9px;
-    height: 9px;
+    width: rem(9px);
+    height: rem(9px);
     background-color: $color-primary;
     opacity: 0.6;
-    margin-bottom: 13px;
+    margin-bottom: rem(13px);
     cursor: pointer;
     position: relative;
   }
@@ -27,9 +27,9 @@
       content: "";
       border-radius: 50%;
       position: absolute;
-      width: 15px;
-      height: 15px;
-      border: 3px solid red;
+      width: rem(15px);
+      height: rem(15px);
+      border: rem(3px) solid red;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

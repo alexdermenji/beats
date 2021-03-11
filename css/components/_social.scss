@@ -5,12 +5,12 @@
 }
 
 .social__item {
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
 
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 }
 .social__link {
@@ -43,34 +43,3 @@
     background-size: cover;
   }
 }
-
-// .social__link:before {
-//   content: "";
-//   position: absolute;
-//   width: 36px;
-//   height: 36px;
-//   background-image: url("../../img/spritesheet.png");
-//   opacity: 1;
-//   transition: opacity 0.4s;
-// }
-
-// .social__link:after {
-//   content: "";
-//   width: 36px;
-//   height: 36px;
-//   position: absolute;
-//   background-image: url("../../img/spritesheet.png");
-//   opacity: 0;
-//   transition: opacity 0.5s;
-// }
-
-// .social__link:hover:before {
-//   opacity: 0;
-// }
-// .social__link:hover:after {
-//   opacity: 1;
-// }
-
-// .social__item:not(:last-child) {
-//   margin-right: 8px;
-// }

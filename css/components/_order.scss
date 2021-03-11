@@ -5,34 +5,34 @@
   &__column {
     flex: 1;
     &:not(:last-child) {
-      margin-right: 26px;
+      margin-right: rem(26px);
     }
   }
 
   &__row {
     display: flex;
-    margin-bottom: 11px;
+    margin-bottom: rem(11px);
     &-radio {
-      margin-bottom: 21px;
+      margin-bottom: rem(21px);
     }
     &-checkbox {
-      margin-bottom: 48px;
+      margin-bottom: rem(48px);
     }
   }
 
   &__input {
     width: 100%;
     display: block;
-    height: 58px;
-    border-radius: 4px;
-    margin-top: 6px;
+    height: rem(58px);
+    border-radius: rem(4px);
+    margin-top: rem(6px);
     overflow: hidden;
-    border: 3px solid transparent;
+    border: rem(3px) solid transparent;
 
     &:focus,
     &:hover {
-      outline: 3px solid transparent;
-      border: 3px solid $color-secondary;
+      outline: rem(3px) solid transparent;
+      border: rem(3px) solid $color-secondary;
     }
   }
 
@@ -42,39 +42,39 @@
     display: block;
   }
   &__label--top:not(:last-child) {
-    margin-right: 16px;
+    margin-right: rem(16px);
   }
   &__label--bottom:not(:last-child) {
-    margin-right: 13px;
+    margin-right: rem(13px);
   }
 
   &__textarea {
-    min-height: 150px;
-    margin-bottom: 26px;
+    min-height: rem(150px);
+    margin-bottom: rem(26px);
   }
 
   &__radio-label {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: rem(35px);
     cursor: pointer;
     user-select: none;
     &:not(:last-child) {
-      margin-right: 16px;
+      margin-right: rem(16px);
     }
   }
 
   &__radio {
     position: absolute;
-    left: -9999px;
+    left: rem(-9999px);
     cursor: pointer;
   }
   &__checkmark {
     position: absolute;
-    top: -5px;
+    top: rem(-5px);
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: rem(25px);
+    width: rem(25px);
     background-color: $color-white;
     border-radius: 50%;
 
@@ -85,8 +85,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 13px;
-      width: 13px;
+      height: rem(13px);
+      width: rem(13px);
       border-radius: 50%;
       background: $color-secondary;
     }
@@ -99,25 +99,25 @@
   &__checkbox-label {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: rem(35px);
     cursor: pointer;
     user-select: none;
   }
 
   &__checkbox {
     position: absolute;
-    left: -9999px;
+    left: rem(-9999px);
     cursor: pointer;
   }
 
   &__custom-checkbox {
     position: absolute;
-    top: -5px;
+    top: rem(-5px);
     left: 0;
-    height: 24px;
-    width: 24px;
+    height: rem(24px);
+    width: rem(24px);
     background-color: $color-white;
-    border-radius: 4px;
+    border-radius: rem(4px);
 
     &:after {
       content: "";
@@ -126,8 +126,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 10px;
-      width: 10px;
+      height: rem(10px);
+      width: rem(10px);
       background: url(../img/icons/icon-checkmark.png) no-repeat center;
       background-size: contain;
     }
@@ -142,6 +142,6 @@
   }
 
   &__btn {
-    margin-right: 16px;
+    margin-right: rem(16px);
   }
 }

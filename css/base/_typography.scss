@@ -1,17 +1,17 @@
 body {
   font-family: "Play", sans-serif;
-  font-size: 18px;
+  font-size: rem(18px);
 }
 
 .title--main {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
+  font-size: rem(48px);
+  line-height: rem(52px);
   text-transform: uppercase;
 }
 
 .title--small {
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 700;
 }
 

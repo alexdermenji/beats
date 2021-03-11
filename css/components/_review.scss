@@ -1,12 +1,12 @@
 .review {
   background-color: $color-grey-lighter;
-  padding: 42px 42px 42px 30px;
+  padding: rem(42px) rem(42px) rem(42px) rem(30px);
   display: none;
   position: relative;
   overflow: hidden;
 
   &:before {
-    @include icon(83px, 83px);
+    @include icon(rem(83px), rem(83px));
     left: 50%;
     top: 0;
     transform: translate(-50%, -70%);
@@ -19,9 +19,9 @@
     display: flex;
   }
   &__img {
-    width: 253px;
-    height: 264px;
-    margin-right: 40px;
+    width: rem(253px);
+    height: rem(264px);
+    margin-right: rem(40px);
   }
 
   &__image {
@@ -31,21 +31,21 @@
   }
   &__content {
     flex: 1;
-    padding-top: 35px;
+    padding-top: rem(35px);
   }
 
   &__title {
-    margin-bottom: 27px;
+    margin-bottom: rem(27px);
   }
 
   &__text {
     color: $color-ternary;
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
     width: 82%;
   }
 
   &__author {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 700;
   }
 }

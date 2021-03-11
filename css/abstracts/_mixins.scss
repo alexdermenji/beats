@@ -5,3 +5,7 @@
   height: $height;
   position: absolute;
 }
+
+@function rem($px) {
+  @return $px / $fontSize + 0rem;
+}
