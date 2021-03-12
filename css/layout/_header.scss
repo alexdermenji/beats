@@ -5,6 +5,17 @@
   align-items: center;
 
   &__menu {
-    width: 70%;
+    padding: 0 40px;
+    width: 100%;
+    flex: 1;
+  }
+  @media screen and (max-width: 768px) {
+    &__menu,
+    &__contacts {
+      display: none;
+    }
+    &__header__nav {
+      display: block;
+    }
   }
 }

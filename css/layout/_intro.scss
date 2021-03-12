@@ -15,14 +15,34 @@
     font-size: rem(21px);
     margin-bottom: rem(36px);
   }
+}
 
-  &__img {
-    position: absolute;
-    right: rem(30px);
-    width: 43%;
-    z-index: 1;
+@media screen and (max-width: 768px) {
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 70%;
+  }
+  .intro__title {
+    width: 90%;
+    text-align: center;
+  }
 
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+  .intro__subtitle {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro__subtitle {
+    width: 80%;
+    font-size: rem(18px);
+    line-height: rem(20px);
+  }
+
+  .intro__title {
+    width: 80%;
   }
 }

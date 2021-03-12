@@ -2,6 +2,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(5px);
   }
 
   &__link {

@@ -46,13 +46,13 @@ table {
 
 .wrapper {
   overflow: hidden;
-  min-width: 61.1111111111rem;
   min-height: 100%;
 }
 
 .container {
   margin: 0 auto;
-  width: 51.1111111111rem;
+  width: 90%;
+  max-width: 51.1111111111rem;
 }
 .container--section, .container--features, .container--reviews, .container--hero {
   display: flex;
@@ -72,6 +72,20 @@ table {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .container--hero {
+    background: url(../img/headphones.png) center top 30%/50% no-repeat;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container--hero {
+    background: url(../img/headphones.png) center top 20%/70% no-repeat;
+  }
+}
 body {
   font-family: "Play", sans-serif;
   font-size: 1rem;
@@ -93,6 +107,12 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 480px) {
+  .title--main {
+    font-size: 1.7777777778rem;
+    line-height: 2rem;
+  }
+}
 .hero {
   background-color: #f5f5f5;
   padding-bottom: 2.8888888889rem;
@@ -113,6 +133,11 @@ body {
   transform: rotate(-45deg);
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+}
 .header {
   width: 100%;
   display: flex;
@@ -120,7 +145,17 @@ body {
   align-items: center;
 }
 .header__menu {
-  width: 70%;
+  padding: 0 40px;
+  width: 100%;
+  flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .header__menu, .header__contacts {
+    display: none;
+  }
+  .header__header__nav {
+    display: block;
+  }
 }
 
 .intro {
@@ -139,16 +174,36 @@ body {
   font-size: 1.1666666667rem;
   margin-bottom: 2rem;
 }
-.intro__img {
-  position: absolute;
-  right: 1.6666666667rem;
-  width: 43%;
-  z-index: 1;
-  shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-}
 
+@media screen and (max-width: 768px) {
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 70%;
+  }
+
+  .intro__title {
+    width: 90%;
+    text-align: center;
+  }
+
+  .intro__subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro__subtitle {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.1111111111rem;
+  }
+
+  .intro__title {
+    width: 80%;
+  }
+}
 .features {
   padding-top: 5.7222222222rem;
   position: relative;
@@ -304,12 +359,49 @@ body {
 .menu__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu__item:not(:last-child) {
+  margin-right: 0.2777777778rem;
 }
 .menu__link {
   text-decoration: none;
   color: #292929;
 }
 
+.hamburger {
+  width: 1.4444444444rem;
+  height: 1.4444444444rem;
+  position: relative;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+.hamburger__btn, .hamburger__btn:after, .hamburger__btn:before {
+  background-color: #292929;
+  border-radius: 0.1666666667rem;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2222222222rem;
+  transition: all 0.2s ease-in-out;
+}
+.hamburger__btn:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hamburger__btn:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
 .btn {
   display: inline-block;
   background-color: #e01f3d;
@@ -333,6 +425,12 @@ body {
   outline: 0.1666666667rem solid #e01f3d;
 }
 
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 1.0555555556rem;
+    padding: 1.1666666667rem 2rem;
+  }
+}
 .scroll {
   position: fixed;
   top: 13.3333333333rem;
@@ -593,6 +691,11 @@ body {
   left: -0.5555555556rem;
 }
 
+@media screen and (max-width: 768px) {
+  .advantages {
+    display: none;
+  }
+}
 .contacts {
   position: relative;
 }

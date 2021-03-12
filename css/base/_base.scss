@@ -46,13 +46,13 @@ table {
 
 .wrapper {
   overflow: hidden;
-  min-width: rem(1100px);
   min-height: 100%;
 }
 
 .container {
   margin: 0 auto;
-  width: rem(920px);
+  width: 90%;
+  max-width: rem(920px);
   &--section {
     display: flex;
     flex-direction: column;
@@ -74,5 +74,19 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .container--hero {
+    background: url(../img/headphones.png) center top 30%/ 50% no-repeat;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container--hero {
+    background: url(../img/headphones.png) center top 20%/ 70% no-repeat;
   }
 }

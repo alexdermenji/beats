@@ -1,0 +1,35 @@
+.hamburger {
+  width: rem(26px);
+  height: rem(26px);
+  position: relative;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  &__btn {
+    background-color: $color-primary;
+    border-radius: rem(3px);
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(4px);
+    transition: all 0.2s ease-in-out;
+    &:before {
+      @extend .hamburger__btn;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      @extend .hamburger__btn;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+} ;
