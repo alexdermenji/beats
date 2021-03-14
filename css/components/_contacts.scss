@@ -5,7 +5,8 @@
     color: $color-primary;
   }
   &__icon {
-    width: 14px;
-    height: 14px;
+    margin-right: rem(6px);
+    width: rem(14px);
+    height: rem(14px);
   }
 }

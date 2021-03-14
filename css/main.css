@@ -805,8 +805,9 @@ body {
   color: #292929;
 }
 .contacts__icon {
-  width: 14px;
-  height: 14px;
+  margin-right: 0.3333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
 }
 
 .social {
