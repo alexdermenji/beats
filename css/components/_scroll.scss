@@ -36,3 +36,9 @@
     }
   }
 }
+
+@include tablets {
+  .scroll {
+    display: none;
+  }
+}

@@ -22,7 +22,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include tablets {
   .advantages {
     display: none;
   }

@@ -5,11 +5,11 @@
   align-items: center;
 
   &__menu {
-    padding: 0 40px;
+    padding: 0 1%;
     width: 100%;
     flex: 1;
   }
-  @media screen and (max-width: 768px) {
+  @include tablets {
     &__menu,
     &__contacts {
       display: none;

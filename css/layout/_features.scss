@@ -2,7 +2,7 @@
   padding-top: rem(103px);
   position: relative;
   padding-bottom: rem(78px);
-  height: 100vh;
+  min-height: 100vh;
   min-height: rem(650px);
   &:after {
     @include icon(0px, 0px);
@@ -17,6 +17,9 @@
   }
   &__list {
     display: flex;
+    @include phones {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -26,6 +29,11 @@
     position: relative;
     padding: 0 3%;
     max-width: 33.33%;
+    @include phones {
+      max-width: 100%;
+      flex-direction: row;
+      margin-bottom: rem(31px);
+    }
     &:first-child {
       padding-left: 0;
     }
@@ -40,11 +48,19 @@
       top: rem(30px);
       right: 0%;
       transform: translateX(50%);
+      @include tablets {
+        display: none;
+      }
     }
   }
 
   &__content {
     text-align: center;
+    @include phones {
+      width: 70%;
+      text-align: left;
+      padding-left: rem(12px);
+    }
   }
 
   &__item-title {
@@ -53,6 +69,9 @@
 
   &__item-text {
     color: $color-ternary;
+    @include phones {
+      font-size: 16px;
+    }
   }
   &__header {
     display: flex;
@@ -70,6 +89,9 @@
     font-size: rem(16px);
     line-height: rem(19px);
     color: $color-ternary;
+    @include phones {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -81,6 +103,10 @@
     width: rem(128px);
     height: rem(128px);
     margin-bottom: rem(24px);
+
+    @include phones {
+      width: 30%;
+    }
     &:before {
       @include icon(rem(68px), rem(68px));
     }

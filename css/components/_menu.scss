@@ -1,12 +1,13 @@
 .menu {
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
   &__item:not(:last-child) {
-    margin-right: rem(5px);
+    margin-right: rem(20px);
+    margin-bottom: rem(10px);
   }
 
   &__link {

@@ -1,7 +1,12 @@
-html,
-body {
-  height: 100%;
+html {
   font-size: $fontSize;
+  height: 100%;
+  @include tablets {
+    font-size: $fontSize -1px;
+  }
+  @include phones {
+    font-size: $fontSize -2px;
+  }
 }
 
 * {
@@ -74,19 +79,18 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include phones {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@include tablets {
   .container {
     width: 90%;
   }
   .container--hero {
-    background: url(../img/headphones.png) center top 30%/ 50% no-repeat;
-  }
-}
-@media screen and (max-width: 480px) {
-  .container--hero {
-    background: url(../img/headphones.png) center top 20%/ 70% no-repeat;
+    background: none;
   }
 }

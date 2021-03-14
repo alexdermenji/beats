@@ -19,7 +19,7 @@ body {
   color: $color-white;
 }
 
-@media screen and (max-width: 480px) {
+@include phones {
   .title--main {
     font-size: rem(32px);
     line-height: rem(36px);

@@ -2,10 +2,20 @@
   display: flex;
   justify-content: space-between;
   outline-color: $color-secondary;
+  @include tablets {
+    flex-direction: column;
+    padding: 0 10%;
+  }
+  @include phones {
+    padding: 0;
+  }
   &__column {
     flex: 1;
     &:not(:last-child) {
       margin-right: rem(26px);
+      @include tablets {
+        margin-right: 0;
+      }
     }
   }
 
@@ -14,9 +24,17 @@
     margin-bottom: rem(11px);
     &-radio {
       margin-bottom: rem(21px);
+      @include phones {
+        display: flex;
+        justify-content: center;
+      }
     }
     &-checkbox {
       margin-bottom: rem(48px);
+      @include phones {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
@@ -139,6 +157,9 @@
   &__btns {
     display: flex;
     align-items: center;
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &__btn {
