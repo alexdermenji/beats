@@ -1,17 +1,11 @@
 .contacts {
-  position: relative;
   &__phone {
     position: relative;
     text-decoration: none;
     color: $color-primary;
-    padding: rem(20px);
-    @include phones {
-      padding: 0 0 0 20px;
-    }
   }
-  &__phone::before {
-    @include icon(rem(14px), rem(14px));
-    background: url(../img/icons/icon-phone.png) no-repeat center;
-    left: 0;
+  &__icon {
+    width: 14px;
+    height: 14px;
   }
 }

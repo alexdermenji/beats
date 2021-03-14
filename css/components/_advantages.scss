@@ -5,20 +5,18 @@
   }
 
   &__item {
-    max-width: rem(150px);
-    position: relative;
-    padding-left: rem(40px);
+    max-width: rem(170px);
+    display: flex;
+    align-items: center;
 
     &:not(:last-child) {
       margin-right: rem(8px);
     }
   }
-  @each $icon in (eyes, battery, charge) {
-    &--#{$icon}:before {
-      background: url("../img/icons/icon-#{$icon}.png") no-repeat center;
-      @include icon(rem(41px), rem(41px));
-      left: rem(-10px);
-    }
+  &__icon {
+    width: rem(52px);
+    height: rem(52px);
+    margin-right: rem(11px);
   }
 }
 

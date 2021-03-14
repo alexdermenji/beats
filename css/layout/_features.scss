@@ -107,16 +107,10 @@
     @include phones {
       width: 30%;
     }
-    &:before {
-      @include icon(rem(68px), rem(68px));
-    }
   }
 
-  @each $number in (1, 2, 3) {
-    &__img--#{$number}:before {
-      background: url("../img/icons/icon-feature-#{$number}.png")
-        no-repeat
-        center;
-    }
+  &__icon {
+    width: rem(68px);
+    height: rem(68px);
   }
 }
