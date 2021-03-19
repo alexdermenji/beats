@@ -1,0 +1,18 @@
+.products {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $color-grey-light;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: rem(-10px);
+    right: 10%;
+    width: rem(24px);
+    height: rem(24px);
+    transform: rotate(29deg);
+    background-color: $color-primary;
+  }
+}

@@ -21,6 +21,10 @@
       outline: rem(3px) solid $color-secondary;
     }
   }
+  &--slider {
+    font-size: rem(16px);
+    padding: rem(21px) rem(41px);
+  }
 }
 
 @include phones {

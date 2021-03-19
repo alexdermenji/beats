@@ -1,0 +1,170 @@
+.slider {
+  position: relative;
+  &__arrows {
+    width: rem(28px);
+    height: rem(28px);
+    border-color: #000;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    @include tablets {
+      top: 25%;
+    }
+    @include phones {
+      top: 17%;
+    }
+  }
+  &__arrows-prev {
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    transform: rotate(45deg);
+    left: -4%;
+    @include tablets {
+      left: 17%;
+    }
+  }
+
+  &__arrows-next {
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    transform: rotate(-135deg);
+    right: 3%;
+    @include tablets {
+      right: 18%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    max-width: rem(452px);
+    padding-top: rem(28px);
+    @include tablets {
+      max-width: rem(306px);
+      padding-top: 0;
+      margin-bottom: rem(49px);
+    }
+  }
+  &__description {
+    width: 50%;
+    padding-left: 6%;
+    @include tablets {
+      width: 100%;
+      padding: 0 rem(10px);
+    }
+  }
+
+  &__settings {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(91px);
+    height: rem(91px);
+    background-color: $color-grey-darker;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: rem(25px);
+    &-icon {
+      width: rem(42px);
+      height: rem(42px);
+      fill: $color-white;
+    }
+
+    &:hover > .settings {
+      display: flex;
+    }
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: rem(36px);
+    line-height: rem(42px);
+    margin-bottom: rem(24px);
+    @include tablets {
+      text-align: center;
+      font-size: rem(28px);
+      line-height: rem(32px);
+      margin-bottom: rem(14px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+      align-items: center;
+    }
+  }
+
+  &__text {
+    color: $color-ternary;
+    font-size: rem(16px);
+    margin-bottom: rem(33px);
+    padding-right: rem(41px);
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__features {
+    display: flex;
+    margin-bottom: rem(24px);
+
+    @include tablets {
+      width: 100%;
+      max-width: rem(240px);
+      justify-content: space-between;
+    }
+  }
+
+  &__feature {
+    padding-right: rem(86px);
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+
+    @include tablets {
+      padding: 0;
+    }
+    &-title {
+      font-size: rem(16px);
+    }
+    &-body {
+      font-weight: 700;
+    }
+  }
+
+  &__order {
+    display: flex;
+    @include tablets {
+      width: 100%;
+      max-width: rem(356px);
+      justify-content: space-between;
+    }
+  }
+
+  &__price {
+    font-size: 36px;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    @include tablets {
+      margin-right: 0;
+    }
+  }
+}
