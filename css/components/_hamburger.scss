@@ -12,7 +12,7 @@
     display: block;
     width: 100%;
     height: rem(4px);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
     &:before {
       @extend .hamburger__btn;
       position: absolute;
@@ -24,7 +24,23 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      transition: all 0.5s ease-in-out;
     }
+    &--close {
+      transform: rotate(45deg);
+      background-color: $color-white;
+      &:before {
+        display: none;
+      }
+      &:after {
+        transform: rotate(90deg);
+        background-color: $color-white;
+      }
+    }
+  }
+  &--close {
+    z-index: 110;
+    margin-left: auto;
   }
 }
 
@@ -32,4 +48,4 @@
   .hamburger {
     display: flex;
   }
-} ;
+}

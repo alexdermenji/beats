@@ -3,6 +3,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    &--modal {
+      flex-direction: column;
+      font-size: rem(36px);
+      line-height: rem(72px);
+      color: $color-white;
+      text-align: center;
+    }
   }
 
   &__item:not(:last-child) {
@@ -12,5 +20,8 @@
   &__link {
     text-decoration: none;
     color: $color-primary;
+    &--modal {
+      color: $color-white;
+    }
   }
 }
