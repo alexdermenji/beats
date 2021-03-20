@@ -100,15 +100,24 @@
     }
   }
 
+  &__header {
+    margin-bottom: rem(24px);
+    @include tablets {
+      margin-bottom: rem(14px);
+    }
+    @include phones {
+      margin-bottom: 5%;
+    }
+  }
+
   &__title {
     font-size: rem(36px);
     line-height: rem(42px);
-    margin-bottom: rem(24px);
+
     @include tablets {
       text-align: center;
       font-size: rem(28px);
       line-height: rem(32px);
-      margin-bottom: rem(14px);
     }
   }
 
@@ -130,7 +139,7 @@
     }
     @include phones {
       padding-right: 0;
-      margin-bottom: 2%;
+      margin-bottom: 5%;
     }
   }
 
@@ -172,6 +181,9 @@
       max-width: rem(356px);
       justify-content: space-between;
     }
+    @include phones {
+      max-width: 80%;
+    }
   }
 
   &__price {
@@ -183,6 +195,10 @@
 
     @include tablets {
       margin-right: 0;
+      font-size: rem(40px);
+    }
+    @include phones {
+      font-size: rem(32px);
     }
   }
 }
