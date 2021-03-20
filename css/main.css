@@ -1120,7 +1120,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .slider__order {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 .slider__price {
