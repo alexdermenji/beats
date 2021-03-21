@@ -346,6 +346,7 @@ body {
 @media screen and (max-width: 480px) {
   .features__img {
     width: 30%;
+    min-width: 115px;
   }
 }
 .features__icon {
@@ -510,16 +511,18 @@ body {
   transform: rotate(90deg);
   background-color: #ffffff;
 }
-.hamburger--close {
-  z-index: 110;
-  margin-left: auto;
-}
 
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 }
+.hamburger--close {
+  z-index: 110;
+  margin-left: auto;
+  display: flex;
+}
+
 .btn {
   display: inline-block;
   background-color: #e01f3d;

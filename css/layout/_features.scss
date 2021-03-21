@@ -107,6 +107,7 @@
 
     @include phones {
       width: 30%;
+      min-width: 115px;
     }
   }
 

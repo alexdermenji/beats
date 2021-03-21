@@ -38,14 +38,16 @@
       }
     }
   }
-  &--close {
-    z-index: 110;
-    margin-left: auto;
-  }
 }
 
 @include tablets {
   .hamburger {
     display: flex;
   }
+}
+
+.hamburger--close {
+  z-index: 110;
+  margin-left: auto;
+  display: flex;
 }
