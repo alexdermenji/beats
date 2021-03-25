@@ -4,10 +4,17 @@
   const container = document.querySelector(".slider__list");
 
   const slidersCount = document.querySelectorAll(".slider__item").length;
-  const sliderSize = container.offsetWidth;
-  console.log(sliderSize);
-
+  let sliderSize = container.offsetWidth;
   let currentPosition = 0;
+
+  $(window).resize(function () {
+    sliderSize = container.offsetWidth;
+  });
+
+  container.addEventListener("resize", () => {
+    console.log(resize);
+    sliderSize = container.offsetWidth;
+  });
 
   right.addEventListener("click", function (e) {
     e.preventDefault();
