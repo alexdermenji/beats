@@ -1,10 +1,7 @@
 (function () {
   const btn = document.querySelectorAll(".team__person");
-  console.log(btn);
   const descriptionWrap = document.querySelectorAll(".team__description-wrap");
-  console.log(descriptionWrap);
   const description = document.querySelectorAll(".team__description");
-  console.log(description);
   const triangle = document.querySelectorAll(".team__triangle");
 
   function hideAccordeon() {
