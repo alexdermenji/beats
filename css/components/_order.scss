@@ -54,6 +54,10 @@
     }
   }
 
+  &__input--error {
+    border: rem(3px) solid $color-secondary;
+  }
+
   &__input-label {
     cursor: pointer;
     width: 100%;

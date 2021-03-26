@@ -3,7 +3,8 @@
   const reviewsBtns = document.querySelectorAll(".reviews__btn");
 
   reviewsBtns.forEach((currentValue, currentIndex) => {
-    currentValue.addEventListener("click", function () {
+    currentValue.addEventListener("click", function (e) {
+      e.preventDefault();
       reviewsBtns.forEach((el) => {
         el.classList.remove("reviews__btn--active");
       });

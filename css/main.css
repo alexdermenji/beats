@@ -521,6 +521,9 @@ body {
 .reviews__btn--active {
   border: 0.2222222222rem solid #e01f3d;
 }
+.reviews__btn:hover {
+  border: 0.2222222222rem solid #e01f3d;
+}
 
 .form {
   min-height: 100vh;
@@ -846,6 +849,9 @@ body {
 }
 .order__input:focus, .order__input:hover {
   outline: 0.1666666667rem solid transparent;
+  border: 0.1666666667rem solid #e01f3d;
+}
+.order__input--error {
   border: 0.1666666667rem solid #e01f3d;
 }
 .order__input-label {

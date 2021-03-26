@@ -27,5 +27,8 @@
     &--active {
       border: rem(4px) solid $color-secondary;
     }
+    &:hover {
+      border: rem(4px) solid $color-secondary;
+    }
   }
 }

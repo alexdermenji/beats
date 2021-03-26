@@ -488,7 +488,7 @@
                 <div class="team__description-wrap team__description--active">
                   <div class="team__description">
                     <div class="team__image">
-                      <img src="../img/photos/team1.jpg" alt="Team member" class="team__jpg">
+                      <img src="./img/photos/team1.jpg" alt="Team member" class="team__jpg">
                     </div>
                     <div class="team__position">Главный технолог</div>
                     <div class="team__achievements">Разработал дизан наушников beats solo 3.
@@ -504,7 +504,7 @@
                 <div class="team__description-wrap">
                   <div class="team__description">
                     <div class="team__image">
-                      <img src="../img/photos/team2.jpg" alt="Team member" class="team__jpg">
+                      <img src="./img/photos/team2.jpg" alt="Team member" class="team__jpg">
                     </div>
                     <div class="team__position">Главный технолог</div>
                     <div class="team__achievements">Разработал дизан наушников beats solo 3.
@@ -520,7 +520,7 @@
                 <div class="team__description-wrap">
                   <div class="team__description">
                     <div class="team__image">
-                      <img src="../img/photos/team3.jpg" alt="Team member" class="team__jpg">
+                      <img src="./img/photos/team3.jpg" alt="Team member" class="team__jpg">
                     </div>
                     <div class="team__position">Главный технолог</div>
                     <div class="team__achievements">Разработал дизан наушников beats solo 3.
@@ -536,7 +536,7 @@
                 <div class="team__description-wrap">
                   <div class="team__description">
                     <div class="team__image">
-                      <img src="../img/photos/team4.jpg" alt="Team member" class="team__jpg">
+                      <img src="./img/photos/team4.jpg" alt="Team member" class="team__jpg">
                     </div>
                     <div class="team__position">Главный технолог</div>
                     <div class="team__achievements">Разработал дизан наушников beats solo 3.
@@ -629,34 +629,36 @@
           <div class="form__title">
             <h2 class="title--main title--white">Закажите доставку</h2>
           </div>
-          <form action="submit" class="order">
+          <form action="submit" class="order" id="form">
             <div class="order__column">
               <div class="order__row">
-                <label for="name" name="name" class="order__input-label order__label--top"> Имя
-                  <input type="text" class="order__input order__input--name" id="name">
+                <label for="name" class="order__input-label order__label--top"> Имя
+                  <input type="text" class="order__input order__input--name" name="name" required>
                 </label>
-                <label for="phone" class="order__input-label order__label--top" id="phone">
-                  Телефон<input type="text" class="order__input">
+                <label for="phone" class="order__input-label order__label--top">
+                  Телефон
+                  <input type="text" class="order__input" name="phone" required>
+                  <input type="hidden" name="to" value="semshow@mail.ru">
                 </label>
 
               </div>
               <div class="order__row">
                 <label for="street" class="order__input-label">
-                  Улица<input type="text" class="order__input" id="street">
+                  Улица<input type="text" class="order__input" name="street">
                 </label>
               </div>
               <div class="order__row">
                 <label for="house" class="order__input-label order__label--bottom">
-                  Дом<input type="text" class="order__input" id="house">
+                  Дом<input type="text" class="order__input" name="house">
                 </label>
                 <label for="block" class="order__input-label order__label--bottom">
-                  Блок<input type="text" class="order__input" id="block">
+                  Блок<input type="text" class="order__input" name="block">
                 </label>
-                <label for="ap" class="order__input-label order__label--bottom">
-                  Квартира<input type="text" class="order__input" id="ap">
+                <label for="apartment" class="order__input-label order__label--bottom">
+                  Квартира<input type="text" class="order__input" name="apartment">
                 </label>
                 <label for="level" class="order__input-label order__label--bottom">
-                  Этаж<input type="text" class="order__input" id="level">
+                  Этаж<input type="text" class="order__input" name="level">
                 </label>
               </div>
             </div>
@@ -664,32 +666,32 @@
               <div class="order__row">
                 <label for="comment" class="order__input-label">
                   Коментарий
-                  <textarea class="order__input order__textarea" name=" comment" id="comment" cols="30"
-                    rows="10"></textarea>
+                  <textarea class="order__input order__textarea" name=" comment" id="comment" cols="30" rows="10"
+                    required></textarea>
                 </label>
               </div>
               <div class="order__row order__row-radio">
                 <label for="radio1" class="order__radio-label">
                   Потребуется сдача
-                  <input type="radio" class="order__radio" id="radio1" name="payment">
+                  <input type="radio" class="order__radio" id="radio1" name="payment" value="cash">
                   <span class="order__checkmark"></span>
                 </label>
                 <label for="radio2" class="order__radio-label">
                   Оплата картой
-                  <input type="radio" class="order__radio" name="payment" id="radio2" checked>
+                  <input type="radio" class="order__radio" name="payment" id="radio2" value="card" checked>
                   <span class="order__checkmark"></span>
                 </label>
               </div>
               <div class="order__row order__row-checkbox">
                 <label for="call" class="order__checkbox-label">
                   Не перезванивать
-                  <input type="checkbox" class="order__checkbox" id="call">
+                  <input type="checkbox" class="order__checkbox" name="call" id="call">
                   <span class="order__custom-checkbox"></span>
                 </label>
               </div>
               <div class="order__btns">
                 <div class="order__btn">
-                  <button type="submit" class="btn">Заказать</button>
+                  <button type="submit" class="btn" id="orderBtn">Заказать</button>
                 </div>
                 <div class="reset__btn">
                   <button type="reset" class="btn--reset">Очистить</button>
@@ -792,6 +794,7 @@
   <script src="js/accordion.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/slideshow.js"></script>
+  <script src="js/formRequest.js"></script>
 </body>
 
 </html>
