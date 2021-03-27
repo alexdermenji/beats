@@ -1,34 +1,27 @@
 (function () {
   const myForm = document.getElementById("form");
   const orderBtn = document.getElementById("orderBtn");
+  const formOverlay = document.querySelector(".form-overlay");
+  const modalMenu = document.querySelector(".modal");
+  const body = document.body;
+  const overlayClose = document.getElementById("formOverlayClose");
+  const overlayText = document.querySelector(".form-overlay__text");
 
   orderBtn.addEventListener("click", function (event) {
     event.preventDefault();
 
     if (validateForm(myForm)) {
-      const data = {
-        comment: myForm.elements.comment.value,
-        name: myForm.elements.name.value,
-        phone: myForm.elements.phone.value,
-        to: myForm.elements.to.value,
-        // house: myForm.elements.house.value,
-        // block: myForm.elements.block.value,
-        // apartment: myForm.elements.apartment.value,
-        // level: myForm.elements.level.value,
-        // payment: myForm.elements.payment.value,
-        // callback: myForm.elements.call.checked,
-      };
-      console.log(data);
+      const data = new FormData(myForm);
       const xhr = new XMLHttpRequest();
       xhr.responseType = "json";
       xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-      xhr.send(JSON.stringify(data));
+      xhr.send(data);
       xhr.addEventListener("load", () => {
+        openOverlay();
         if (xhr.response.status) {
-          console.log("Все ок");
+          overlayText.textContent = xhr.response.message;
         } else {
-          console.log("Ошибка");
-          console.log(xhr.response);
+          overlayText.textContent = xhr.response.message;
         }
       });
     } else {
@@ -58,5 +51,16 @@
       field.classList.add("order__input--error");
     }
     return field.checkValidity();
+  }
+
+  function openOverlay() {
+    modalMenu.style.display = "flex";
+    body.style.overflow = "hidden";
+    formOverlay.classList.add("form-overlay--open");
+    overlayClose.addEventListener("click", function () {
+      formOverlay.classList.remove("form-overlay--open");
+      modalMenu.style.display = "none";
+      body.style.overflow = "";
+    });
   }
 })();
