@@ -494,6 +494,20 @@ body {
   }
 }
 
+.colours {
+  position: relative;
+  background: url(../img/bg/bg-accordion.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 36.1111111111rem;
+  padding-top: 6.6666666667rem;
+}
+.colours__accordion {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .reviews {
   min-height: 100vh;
   padding-top: 3.5555555556rem;
@@ -792,6 +806,71 @@ body {
 .review__author {
   font-size: 1rem;
   font-weight: 700;
+}
+
+.accordion {
+  height: 100%;
+}
+.accordion__list {
+  display: flex;
+  height: 100%;
+}
+.accordion__item {
+  display: flex;
+}
+.accordion__header {
+  display: block;
+  position: relative;
+  min-width: 5.6666666667rem;
+  height: 100%;
+}
+.accordion__header--first {
+  background-color: #999999;
+}
+.accordion__header--second {
+  background-color: #151515;
+}
+.accordion__header--third {
+  background-color: #e01f3c;
+}
+@media screen and (max-width: 768px) {
+  .accordion__header {
+    min-width: 5rem;
+  }
+}
+.accordion__title {
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: rotate(-90deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  white-space: nowrap;
+  font-size: 2rem;
+}
+.accordion__content {
+  color: #ffffff;
+  background: rgba(51, 53, 55, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  font-size: 0.8888888889rem;
+  line-height: 1.3333333333rem;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.accordion__item--active > .accordion__content {
+  width: 27.7777777778rem;
+  opacity: 1;
+  overflow: none;
+  padding: 2.2222222222rem;
+  transition: width 0.5s, opacity 1.5s;
+}
+@media screen and (max-width: 768px) {
+  .accordion__item--active > .accordion__content {
+    width: 100%;
+  }
 }
 
 .order {
