@@ -2,7 +2,7 @@
   padding-top: rem(103px);
   position: relative;
   padding-bottom: rem(78px);
-  min-height: 100vh;
+  height: 100vh;
   min-height: rem(650px);
   &:after {
     @include icon(0px, 0px);

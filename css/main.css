@@ -231,7 +231,7 @@ body {
   padding-top: 5.7222222222rem;
   position: relative;
   padding-bottom: 4.3333333333rem;
-  min-height: 100vh;
+  height: 100vh;
   min-height: 36.1111111111rem;
 }
 .features:after {
@@ -358,7 +358,8 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 36.1111111111rem;
   background-color: #f2f5f4;
 }
 .products:after {
@@ -526,6 +527,8 @@ body {
 }
 
 .form {
+  display: flex;
+  align-items: center;
   position: relative;
   min-height: 100vh;
   padding-top: 3.7777777778rem;
