@@ -133,6 +133,7 @@ body {
   padding-top: 1.3333333333rem;
   height: 100vh;
   min-height: 36.1111111111rem;
+  min-height: 36.1111111111rem;
   position: relative;
 }
 .hero:after {
@@ -811,9 +812,16 @@ body {
 .accordion {
   height: 100%;
 }
+@media screen and (max-width: 480px) {
+  .accordion {
+    width: 100%;
+  }
+}
 .accordion__list {
   display: flex;
   height: 100%;
+  position: relative;
+  justify-content: flex-end;
 }
 .accordion__item {
   display: flex;
@@ -860,16 +868,32 @@ body {
   overflow: hidden;
   padding: 0;
 }
+@media screen and (max-width: 480px) {
+  .accordion__item--active {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  }
+}
 .accordion__item--active > .accordion__content {
   width: 27.7777777778rem;
   opacity: 1;
   overflow: none;
   padding: 2.2222222222rem;
-  transition: width 0.5s, opacity 1.5s;
+  transition: width 0.5s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .accordion__item--active > .accordion__content {
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accordion__item--active > .accordion__content {
+    padding: 1.1111111111rem;
   }
 }
 

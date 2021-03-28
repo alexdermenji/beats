@@ -1,9 +1,14 @@
 .accordion {
   height: 100%;
+  @include phones {
+    width: 100%;
+  }
 
   &__list {
     display: flex;
     height: 100%;
+    position: relative;
+    justify-content: flex-end;
   }
 
   &__item {
@@ -52,15 +57,30 @@
     padding: 0;
   }
 
+  &__item--active {
+    @include phones {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+    }
+  }
+
   &__item--active > &__content {
     width: rem(500px);
     opacity: 1;
     overflow: none;
     padding: rem(40px);
-    transition: width 0.5s, opacity 1.5s;
+    transition: width 0.5s;
 
-    @include tablets {
+    @include phones {
       width: 100%;
+    }
+    @include phones {
+      padding: rem(20px);
     }
   }
 }
