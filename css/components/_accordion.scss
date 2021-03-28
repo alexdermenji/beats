@@ -76,7 +76,7 @@
     padding: rem(40px);
     transition: width 0.5s;
 
-    @include phones {
+    @include tablets {
       width: 100%;
     }
     @include phones {
