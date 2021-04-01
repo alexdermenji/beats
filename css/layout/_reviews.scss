@@ -1,4 +1,7 @@
 .reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   padding-top: rem(64px);
   padding-bottom: rem(63px);

@@ -4,6 +4,11 @@
   padding-bottom: rem(78px);
   height: 100vh;
   min-height: rem(650px);
+
+  @include phones {
+    height: auto;
+    min-height: 100vh;
+  }
   &:after {
     @include icon(0px, 0px);
     bottom: -26px;
