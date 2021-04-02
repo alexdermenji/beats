@@ -20,6 +20,10 @@
     cursor: pointer;
     position: relative;
   }
+
+  &__item--light {
+    background-color: $color-white;
+  }
   &__item--active {
     background-color: $color-secondary;
     opacity: 1;

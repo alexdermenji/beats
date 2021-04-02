@@ -24,12 +24,13 @@
         <li class="scroll__item" data-scroll-to="team"></li>
         <li class="scroll__item" data-scroll-to="colours"></li>
         <li class="scroll__item" data-scroll-to="reviews"></li>
+        <li class="scroll__item" data-scroll-to="video"></li>
         <li class="scroll__item" data-scroll-to="form"></li>
         <li class="scroll__item" data-scroll-to="map"></li>
       </ul>
     </div>
     <div class="wrapper__content">
-      <section class="hero" data-section-id="hero">
+      <section class="hero" data-sidemenu-theme="dark" data-section-id="hero">
         <div class="container container--hero">
           <header class="header">
             <div class="header__logo">
@@ -88,7 +89,7 @@
                 из линейки Powerbeats.
               </div>
               <div class="intro__btn">
-                <a href="#" class="btn">Заказать</a>
+                <a href="#" class="btn" data-scroll-to="form">Заказать</a>
               </div>
             </div>
           </div>
@@ -117,7 +118,7 @@
         </div>
 
       </section>
-      <section class="features" data-section-id="features">
+      <section class="features" data-sidemenu-theme="dark" data-section-id="features">
         <div class="container container--features">
           <div class="features__header">
             <div class="features__title">
@@ -190,7 +191,7 @@
           </div>
         </div>
       </section>
-      <section class="products" data-section-id="products">
+      <section class="products" data-sidemenu-theme="dark" data-section-id="products">
         <div class="container">
           <div class="slider">
             <div class="slider__arrows slider__arrows-prev"></div>
@@ -389,7 +390,7 @@
           </div>
         </div>
       </section>
-      <section class="team" data-section-id="team">
+      <section class="team" data-sidemenu-theme="dark" data-section-id="team">
         <div class="container">
           <div class="team__title">
             <h2 class="title--main">
@@ -549,7 +550,7 @@
           </div>
         </div>
       </section>
-      <section class="colours" data-section-id="colours">
+      <section class="colours" data-sidemenu-theme="light" data-section-id="colours">
         <div class="container">
           <h2 class="title--main title--white">Цвета</h2>
         </div>
@@ -560,7 +561,7 @@
                 <h3 class="accordion__title">"Атласное серебро"</h3>
               </a>
               <div class="accordion__content">
-                <p>
+                <p class="accordion__text">
                   Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
                   полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
                   классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не
@@ -596,7 +597,7 @@
           </ul>
         </div>
       </section>
-      <section class="reviews" data-section-id="reviews">
+      <section class="reviews" data-sidemenu-theme="dark" data-section-id="reviews">
         <div class="container container--features">
           <div class="reviews__title">
             <h2 class="title--main">Отзывы</h2>
@@ -671,7 +672,7 @@
           </ul>
         </div>
       </section>
-      <section class="video" data-section-id="video">
+      <section class="video" data-sidemenu-theme="dark" data-section-id="video">
         <div class="container">
           <div class="video__header">
             <h2 class="title--main">
@@ -708,142 +709,141 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="form" data-sidemenu-theme="light" data-section-id="form">
+        <div class="container">
+          <div class="form__title">
+            <h2 class="title--main title--white">Закажите доставку</h2>
+          </div>
+          <form action="submit" class="order" id="form">
+            <div class="order__column">
+              <div class="order__row">
+                <label for="name-input" class="order__input-label order__label--top"> Имя
+                  <input type="text" class="order__input order__input--name" name="name" id="name-input" required>
+                </label>
+                <label for="phone-input" class="order__input-label order__label--top">
+                  Телефон
+                  <input type="text" class="order__input" name="phone" id="phone-input" required>
+                  <input type="hidden" name="to" value="semshow@mail.ru">
+                </label>
+
+              </div>
+              <div class="order__row">
+                <label for="street-input" class="order__input-label">
+                  Улица<input type="text" class="order__input" name="street" id="street-input">
+                </label>
+              </div>
+              <div class="order__row">
+                <label for="house-input" class="order__input-label order__label--bottom">
+                  Дом<input type="text" class="order__input" name="house" id="house-input">
+                </label>
+                <label for="block-input" class="order__input-label order__label--bottom">
+                  Блок<input type="text" class="order__input" name="block" id="block-input">
+                </label>
+                <label for="apartment-input" class="order__input-label order__label--bottom">
+                  Квартира<input type="text" class="order__input" name="apartment" id="apartment-input">
+                </label>
+                <label for="level-input" class="order__input-label order__label--bottom">
+                  Этаж<input type="text" class="order__input" name="level" id="level-input">
+                </label>
+              </div>
+            </div>
+            <div class="order__column">
+              <div class="order__row">
+                <label for="comment-input" class="order__input-label">
+                  Коментарий
+                  <textarea class="order__input order__textarea" name=" comment" id="comment-input" cols="30" rows="10"
+                    required></textarea>
+                </label>
+              </div>
+              <div class="order__row order__row-radio">
+                <label for="radio1" class="order__radio-label">
+                  Потребуется сдача
+                  <input type="radio" class="order__radio" id="radio1" name="payment" value="cash">
+                  <span class="order__checkmark"></span>
+                </label>
+                <label for="radio2" class="order__radio-label">
+                  Оплата картой
+                  <input type="radio" class="order__radio" name="payment" id="radio2" value="card" checked>
+                  <span class="order__checkmark"></span>
+                </label>
+              </div>
+              <div class="order__row order__row-checkbox">
+                <label for="call" class="order__checkbox-label">
+                  Не перезванивать
+                  <input type="checkbox" class="order__checkbox" name="call" id="call">
+                  <span class="order__custom-checkbox"></span>
+                </label>
+              </div>
+              <div class="order__btns">
+                <div class="order__btn">
+                  <button type="submit" class="btn" id="orderBtn">Заказать</button>
+                </div>
+                <div class="reset__btn">
+                  <button type="reset" class="btn--reset">Очистить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-overlay">
+          <div class="form-overlay__text"></div>
+          <div class="btn" id="formOverlayClose">Закрыть</div>
+        </div>
+      </section>
+      <section class="map" data-sidemenu-theme="dark" data-section-id="map">
+
+        <footer class="footer">
+          <div class="container container--footer">
+            <div class="footer__left">
+              <span class="footer__address">Москва, ул.Новый Арбат, д.31/12</span>
+              <div class="footer__contacts contacts">
+                <a href="tel: 8 800 903 90 90" class="contacts__phone">
+                  <svg class="contacts__icon">
+                    <use xlink:href="./img/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                  8 800 903 90 90
+                </a>
+              </div>
+            </div>
+            <div class="footer__right">
+              <div class="footer__social">
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon">
+                        <use xlink:href="./img/svg/sprite.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon">
+                        <use xlink:href="./img/svg/sprite.svg#icon-f"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon">
+                        <use xlink:href="./img/svg/sprite.svg#icon-in"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link">
+                      <svg class="social__icon">
+                        <use xlink:href="./img/svg/sprite.svg#icon-t"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
     </div>
-    </section>
-    <section class="form" data-section-id="form">
-      <div class="container">
-        <div class="form__title">
-          <h2 class="title--main title--white">Закажите доставку</h2>
-        </div>
-        <form action="submit" class="order" id="form">
-          <div class="order__column">
-            <div class="order__row">
-              <label for="name-input" class="order__input-label order__label--top"> Имя
-                <input type="text" class="order__input order__input--name" name="name" id="name-input" required>
-              </label>
-              <label for="phone-input" class="order__input-label order__label--top">
-                Телефон
-                <input type="text" class="order__input" name="phone" id="phone-input" required>
-                <input type="hidden" name="to" value="semshow@mail.ru">
-              </label>
-
-            </div>
-            <div class="order__row">
-              <label for="street-input" class="order__input-label">
-                Улица<input type="text" class="order__input" name="street" id="street-input">
-              </label>
-            </div>
-            <div class="order__row">
-              <label for="house-input" class="order__input-label order__label--bottom">
-                Дом<input type="text" class="order__input" name="house" id="house-input">
-              </label>
-              <label for="block-input" class="order__input-label order__label--bottom">
-                Блок<input type="text" class="order__input" name="block" id="block-input">
-              </label>
-              <label for="apartment-input" class="order__input-label order__label--bottom">
-                Квартира<input type="text" class="order__input" name="apartment" id="apartment-input">
-              </label>
-              <label for="level-input" class="order__input-label order__label--bottom">
-                Этаж<input type="text" class="order__input" name="level" id="level-input">
-              </label>
-            </div>
-          </div>
-          <div class="order__column">
-            <div class="order__row">
-              <label for="comment-input" class="order__input-label">
-                Коментарий
-                <textarea class="order__input order__textarea" name=" comment" id="comment-input" cols="30" rows="10"
-                  required></textarea>
-              </label>
-            </div>
-            <div class="order__row order__row-radio">
-              <label for="radio1" class="order__radio-label">
-                Потребуется сдача
-                <input type="radio" class="order__radio" id="radio1" name="payment" value="cash">
-                <span class="order__checkmark"></span>
-              </label>
-              <label for="radio2" class="order__radio-label">
-                Оплата картой
-                <input type="radio" class="order__radio" name="payment" id="radio2" value="card" checked>
-                <span class="order__checkmark"></span>
-              </label>
-            </div>
-            <div class="order__row order__row-checkbox">
-              <label for="call" class="order__checkbox-label">
-                Не перезванивать
-                <input type="checkbox" class="order__checkbox" name="call" id="call">
-                <span class="order__custom-checkbox"></span>
-              </label>
-            </div>
-            <div class="order__btns">
-              <div class="order__btn">
-                <button type="submit" class="btn" id="orderBtn">Заказать</button>
-              </div>
-              <div class="reset__btn">
-                <button type="reset" class="btn--reset">Очистить</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="form-overlay">
-        <div class="form-overlay__text"></div>
-        <div class="btn" id="formOverlayClose">Закрыть</div>
-      </div>
-    </section>
-    <section class="map" data-section-id="map">
-
-      <footer class="footer">
-        <div class="container container--footer">
-          <div class="footer__left">
-            <span class="footer__address">Москва, ул.Новый Арбат, д.31/12</span>
-            <div class="footer__contacts contacts">
-              <a href="tel: 8 800 903 90 90" class="contacts__phone">
-                <svg class="contacts__icon">
-                  <use xlink:href="./img/svg/sprite.svg#icon-phone"></use>
-                </svg>
-                8 800 903 90 90
-              </a>
-            </div>
-          </div>
-          <div class="footer__right">
-            <div class="footer__social">
-              <ul class="social">
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="./img/svg/sprite.svg#icon-vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="./img/svg/sprite.svg#icon-f"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="./img/svg/sprite.svg#icon-in"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="./img/svg/sprite.svg#icon-t"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
-  </div>
   </div>
   <div class="modal">
     <div class="container">
@@ -881,14 +881,18 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/modalmenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+
+
+  <!-- <script src="js/modalmenu.js"></script> -->
   <script src="js/accordion.js"></script>
   <script src="js/accordionHorizontal.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/slideshow.js"></script>
   <script src="js/formRequest.js"></script>
   <script src="js/player.js"></script>
-  <!-- <script src="js/onePageScroll.js"></script> -->
+  <script src="js/onePageScroll.js"></script>
 </body>
 
 </html>
