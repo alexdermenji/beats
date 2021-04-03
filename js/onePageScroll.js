@@ -4,7 +4,9 @@
   const scrollMenu = $(".scroll__list");
   const scrollItems = scrollMenu.find(".scroll__item");
   const device = new MobileDetect(window.navigator.userAgent);
-  const isMobile = device.mobile();
+  console.log(device);
+  const isMobile = device.userAgent();
+  console.log(isMobile);
 
   let inScroll = false;
   sections.first().addClass("section--active");
@@ -98,19 +100,16 @@
 
   //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 
-  if (isMobile) {
-    $("#body").swipe({
-      //Generic swipe handler for all directions
-      swipe: function (event, direction) {
-        if (direction === "up") {
-          scrollViewport("next");
-        }
-        if (direction === "down") {
-          scrollViewport("prev");
-        }
-      },
-    });
-  }
+  $("body").swipe({
+    swipe: function (event, direction) {
+      if (direction === "up") {
+        scrollViewport("next");
+      }
+      if (direction === "down") {
+        scrollViewport("prev");
+      }
+    },
+  });
 })();
 
 // (function () {
