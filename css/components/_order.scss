@@ -35,6 +35,10 @@
         display: flex;
         justify-content: center;
       }
+
+      @include tablets {
+        margin-bottom: rem(10px);
+      }
     }
   }
 

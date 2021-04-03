@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: rem(64px);
   padding-bottom: rem(63px);
+  @include phones {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   &__item {
     margin-bottom: rem(15px);
@@ -12,6 +16,9 @@
   &__title {
     text-align: center;
     margin-bottom: rem(32px);
+    @include phones {
+      margin-bottom: 0;
+    }
   }
 
   &__btns {

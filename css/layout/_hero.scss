@@ -14,9 +14,3 @@
     transform: rotate(-45deg);
   }
 }
-
-@include tablets {
-  .hero {
-    height: auto;
-  }
-}

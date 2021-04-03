@@ -1,6 +1,10 @@
 .player {
   width: rem(662px);
   height: rem(412px);
+  @include tablets {
+    width: 100%;
+    height: auto;
+  }
   &__wrapper {
     display: flex;
     justify-content: center;
@@ -64,12 +68,21 @@
   &__playback {
     display: flex;
     align-items: center;
+    @include tablets {
+      width: 70%;
+    }
+    @include phones {
+      width: 50%;
+    }
     &-line {
       position: relative;
       cursor: pointer;
       width: rem(442px);
       height: rem(4px);
       background-color: #333333;
+      @include tablets {
+        width: 100%;
+      }
     }
 
     &-redline {
