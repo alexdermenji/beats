@@ -16,4 +16,7 @@
     transform: rotate(29deg);
     background-color: $color-primary;
   }
+  @include phones {
+    height: 100%;
+  }
 }

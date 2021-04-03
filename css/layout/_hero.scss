@@ -13,4 +13,8 @@
     right: rem(124px);
     transform: rotate(-45deg);
   }
+
+  @include phones {
+    height: 100%;
+  }
 }

@@ -6,7 +6,7 @@
   min-height: rem(650px);
 
   @include phones {
-    min-height: 100vh;
+    height: 100%;
   }
   &:after {
     @include icon(0px, 0px);

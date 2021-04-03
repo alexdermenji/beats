@@ -6,6 +6,7 @@
   padding-top: rem(64px);
   padding-bottom: rem(63px);
   @include phones {
+    height: 100%;
     padding-top: 0;
     padding-bottom: 0;
   }

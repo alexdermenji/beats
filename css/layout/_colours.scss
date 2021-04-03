@@ -6,6 +6,10 @@
   min-height: rem(650px);
   padding-top: rem(120px);
 
+  @include phones {
+    height: 100%;
+  }
+
   &__accordion {
     position: absolute;
     right: 0;

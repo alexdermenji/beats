@@ -153,6 +153,11 @@ body {
   right: 6.8888888889rem;
   transform: rotate(-45deg);
 }
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 100%;
+  }
+}
 
 .header {
   width: 100%;
@@ -238,7 +243,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .features {
-    min-height: 100vh;
+    height: 100%;
   }
 }
 .features:after {
@@ -380,11 +385,21 @@ body {
   transform: rotate(29deg);
   background-color: #292929;
 }
+@media screen and (max-width: 480px) {
+  .products {
+    height: 100%;
+  }
+}
 
 .team {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+}
+@media screen and (max-width: 480px) {
+  .team {
+    height: 100%;
+  }
 }
 .team__title {
   text-align: center;
@@ -509,6 +524,11 @@ body {
   min-height: 36.1111111111rem;
   padding-top: 6.6666666667rem;
 }
+@media screen and (max-width: 480px) {
+  .colours {
+    height: 100%;
+  }
+}
 .colours__accordion {
   position: absolute;
   right: 0;
@@ -525,6 +545,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .reviews {
+    height: 100%;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -571,6 +592,11 @@ body {
   height: 100vh;
   min-height: 36.1111111111rem;
 }
+@media screen and (max-width: 480px) {
+  .video {
+    height: 100%;
+  }
+}
 .video:before {
   position: absolute;
   left: 10%;
@@ -608,6 +634,7 @@ body {
     height: auto;
   }
 }
+
 .form {
   display: flex;
   align-items: center;
@@ -618,6 +645,11 @@ body {
   color: #ffffff;
   background: url("../img/bg/bg-form.png") no-repeat center;
   background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .form {
+    height: 100%;
+  }
 }
 .form__title {
   text-align: center;
@@ -640,6 +672,11 @@ body {
   height: 100vh;
   background: url("../img/bg/bg-map.jpg") no-repeat center;
   background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .map {
+    height: 100%;
+  }
 }
 
 .footer {

@@ -4,4 +4,7 @@
   height: 100vh;
   background: url("../img/bg/bg-map.jpg") no-repeat center;
   background-size: cover;
+  @include phones {
+    height: 100%;
+  }
 }
