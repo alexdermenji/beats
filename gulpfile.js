@@ -21,11 +21,7 @@ const env = process.env.NODE_ENV;
 
 const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require("./gulp.config");
 
-// const env = process.env.NODE_ENV;
-
 sass.compiler = require("node-sass");
-
-// const libs = ["node_modules/jquery/dist/jquery.js", "js/*.js"];
 
 task("clean", () => {
   return src("dist/**/*", { read: false }).pipe(rm());
